@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+    <comment>Domain resources for DbuRequest</comment>
+
+    <entry key="dbuRequest">DBU Request</entry>
+    <entry key="dbuRequest_search">Search DBU Request</entry>
+    <entry key="dbuRequest_create">Create DBU Request</entry>
+    <entry key="dbuRequest_edit">Edit {0}</entry>
+    <entry key="dbuRequest_view">View {0}</entry>
+
+    <!-- attributes -->
+    <entry key="dbuRequest_optProgressivo">Opt Progressivo</entry>
+    <entry key="dbuRequest_dn">DN</entry>
+    <entry key="dbuRequest_flagPubblicazione">Flag Pubblicazione</entry>
+    <entry key="dbuRequest_flagCancellazione">Flag Cancellazione</entry>
+    <entry key="dbuRequest_flagModifica">Flag Modifica</entry>
+    <entry key="dbuRequest_ragSociale">Ragione Sociale</entry>
+    <entry key="dbuRequest_indirizzo">Indirizzo</entry>
+    <entry key="dbuRequest_localita">Localita</entry>
+    <entry key="dbuRequest_provincia">Provincia</entry>
+    <entry key="dbuRequest_cap">Cap</entry>
+    <entry key="dbuRequest_pIva">pIva</entry>
+    <entry key="dbuRequest_telefono">Telefono</entry>
+    <entry key="dbuRequest_fax">Fax</entry>
+    <entry key="dbuRequest_titoloStudio">Titolo Studio</entry>
+    <entry key="dbuRequest_attivita">Attivita</entry>
+    <entry key="dbuRequest_flagReverse">Flag Reverse</entry>
+    <entry key="dbuRequest_flagPubblicita">Flag Pubblicita</entry>
+    <entry key="dbuRequest_dateInsert">Date Insert</entry>
+</properties>

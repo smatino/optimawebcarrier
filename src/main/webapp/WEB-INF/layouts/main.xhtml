@@ -14,7 +14,7 @@
 		xmlns:p="http://primefaces.org/ui"
 		xmlns:app="http://springfuse.jaxio.com/app"
 		xmlns:appcc="http://java.sun.com/jsf/composite/components"
-		contentType="text/html" 
+		contentType="text/html"
 		encoding="UTF-8"
 		lang="#{localeService.locale}">
 	<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="#{localeService.locale}" lang="#{localeService.locale}">
@@ -88,6 +88,7 @@
 									<p:menuitem value="#{msg.wlrRequestAggiuntivis}" action="#{wlrRequestAggiuntivisController.beginSearch()}" rendered="#{wlrRequestAggiuntivisPermission.canSearch()}" />
 									<p:menuitem value="#{msg.wlrServiceCode}" action="#{wlrServiceCodeController.beginSearch()}" rendered="#{wlrServiceCodePermission.canSearch()}" />
 									<p:menuitem value="#{msg.wlrTraslocoCode}" action="#{wlrTraslocoCodeController.beginSearch()}" rendered="#{wlrTraslocoCodePermission.canSearch()}" />
+                                    <p:menuitem value="#{msg.dbuRequest}" action="#{dbuRequestController.beginSearch()}" rendered="#{dbuRequestPermission.canSearch()}"/>
 								</p:menuButton>
 								<p:menuButton value="Debug" id="debug">
 									<p:menuitem id="throwException" value="Throw exception" action="#{exceptionUtil.throwRuntimeException()}" process="@this" ajax="false" immediate="true" icon="ui-icon ui-icon-alert" />

@@ -1,0 +1,104 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+                xmlns:ui="http://java.sun.com/jsf/facelets"
+                xmlns:c="http://java.sun.com/jsp/jstl/core"
+                xmlns:f="http://java.sun.com/jsf/core"
+                xmlns:h="http://java.sun.com/jsf/html"
+                xmlns:p="http://primefaces.org/ui"
+                xmlns:app="http://springfuse.jaxio.com/app"
+                xmlns:appcc="http://java.sun.com/jsf/composite/components">
+    <app:search title="dbuRequest_search" model="#{dbuRequestLazyDataModel}" searchForm="#{dbuRequestSearchForm}"
+                controller="#{dbuRequestController}" permission="#{dbuRequestPermission}">
+
+        <ui:define name="filters">
+            <app:inputMultiAutoComplete id="optProgressivo" value="#{dbuRequestSearchForm.optProgressivoSelector}" label="dbuRequest_optProgressivo" completeMethod="completeProperty" property="optProgressivo" />
+            <app:inputMultiAutoComplete id="dn" value="#{dbuRequestSearchForm.dnSelector}" label="dbuRequest_dn" completeMethod="completeProperty" property="dn" />
+            <app:selectManyBoolean id="flagPubblicazione" value="#{dbuRequestSearchForm.flagPubblicazioneSelector}" nullAllowed="true" label="dbuRequest_flagPubblicazione" completeMethod="completeProperty" property="flagPubblicazione" />
+            <app:selectManyBoolean id="flagCancellazione" value="#{dbuRequestSearchForm.flagCancellazioneSelector}" nullAllowed="true" label="dbuRequest_flagCancellazione" completeMethod="completeProperty" property="flagCancellazione" />
+            <app:selectManyBoolean id="flagModifica" value="#{dbuRequestSearchForm.flagModificaSelector}" nullAllowed="true" label="dbuRequest_flagModifica" completeMethod="completeProperty" property="flagModifica" />
+            <app:inputMultiAutoComplete id="ragSociale" value="#{dbuRequestSearchForm.ragSocialeSelector}" label="dbuRequest_ragSociale" completeMethod="completeProperty" property="ragSociale" />
+            <app:inputMultiAutoComplete id="indirizzo" value="#{dbuRequestSearchForm.indirizzoSelector}" label="dbuRequest_indirizzo" completeMethod="completeProperty" property="indirizzo" />
+            <app:inputMultiAutoComplete id="localita" value="#{dbuRequestSearchForm.localitaSelector}" label="dbuRequest_localita" completeMethod="completeProperty" property="localita" />
+            <app:inputMultiAutoComplete id="provincia" value="#{dbuRequestSearchForm.provinciaSelector}" label="dbuRequest_provincia" completeMethod="completeProperty" property="provincia" />
+            <app:inputMultiAutoComplete id="cap" value="#{dbuRequestSearchForm.capSelector}" label="dbuRequest_cap" completeMethod="completeProperty" property="cap" />
+            <app:inputMultiAutoComplete id="codFisc" value="#{dbuRequestSearchForm.codFiscSelector}" label="dbuRequest_codFisc" completeMethod="completeProperty" property="codFisc" />
+            <app:inputMultiAutoComplete id="pIva" value="#{dbuRequestSearchForm.pIvaSelector}" label="dbuRequest_pIva" completeMethod="completeProperty" property="pIva" />
+            <app:inputMultiAutoComplete id="telefono" value="#{dbuRequestSearchForm.telefonoSelector}" label="dbuRequest_telefono" completeMethod="completeProperty" property="telefono" />
+            <app:inputMultiAutoComplete id="fax" value="#{dbuRequestSearchForm.faxSelector}" label="dbuRequest_fax" completeMethod="completeProperty" property="fax" />
+            <app:inputMultiAutoComplete id="titoloStudio" value="#{dbuRequestSearchForm.titoloStudioSelector}" label="dbuRequest_titoloStudio" completeMethod="completeProperty" property="titoloStudio" />
+            <app:inputMultiAutoComplete id="attivita" value="#{dbuRequestSearchForm.attivitaSelector}" label="dbuRequest_attivita" completeMethod="completeProperty" property="attivita" />
+            <app:selectManyBoolean id="flagReverse" value="#{dbuRequestSearchForm.flagReverseSelector}" nullAllowed="true" label="dbuRequest_flagReverse" completeMethod="completeProperty" property="flagReverse" />
+            <app:selectManyBoolean id="flagPubblicita" value="#{dbuRequestSearchForm.flagPubblicitaSelector}" nullAllowed="true" label="dbuRequest_flagPubblicita" completeMethod="completeProperty" property="flagPubblicita" />
+            <app:rangeDateTime id="dateInsert" value="#{dbuRequestSearchForm.dateInsertRange}" label="dbuRequest_dateInsert" property="dateInsert" />
+        </ui:define>
+
+        <ui:define name="result">
+            <c:if test="#{not multiCheckboxSelection}">
+                <p:ajax event="rowSelect" listener="#{dbuRequestLazyDataModel.onRowSelect}" />
+            </c:if>
+
+            <p:column id="dbuRequest_optProgressivo" headerText="#{msg.dbuRequest_optProgressivo}" sortBy="#{item.optProgressivo}" styleClass="xml">
+                #{item.optProgressivo}
+            </p:column>
+            <p:column id="dbuRequest_dn" headerText="#{msg.dbuRequest_dn}" sortBy="#{item.dn}" styleClass="xml">
+                #{item.dn}
+            </p:column>
+            <p:column id="dbuRequest_flagPubblicazione" headerText="#{msg.dbuRequest_flagPubblicazione}" sortBy="#{item.flagPubblicazione}" styleClass="status">
+                #{item.flagPubblicazione}
+            </p:column>
+            <p:column id="dbuRequest_flagCancellazione" headerText="#{msg.dbuRequest_flagCancellazione}" sortBy="#{item.flagCancellazione}" styleClass="status">
+                #{item.flagCancellazione}
+            </p:column>
+            <p:column id="dbuRequest_flagModifica" headerText="#{msg.dbuRequest_flagModifica}" sortBy="#{item.flagModifica}" styleClass="status">
+                #{item.flagModifica}
+            </p:column>
+            <p:column id="dbuRequest_ragSociale" headerText="#{msg.dbuRequest_ragSociale}" sortBy="#{item.ragSociale}" styleClass="xml">
+                #{item.ragSociale}
+            </p:column>
+            <p:column id="dbuRequest_indirizzo" headerText="#{msg.dbuRequest_indirizzo}" sortBy="#{item.indirizzo}" styleClass="xml">
+                #{item.indirizzo}
+            </p:column>
+            <p:column id="dbuRequest_localita" headerText="#{msg.dbuRequest_localita}" sortBy="#{item.localita}" styleClass="xml">
+                #{item.localita}
+            </p:column>
+            <p:column id="dbuRequest_provincia" headerText="#{msg.dbuRequest_provincia}" sortBy="#{item.provincia}" styleClass="xml">
+                #{item.provincia}
+            </p:column>
+            <p:column id="dbuRequest_cap" headerText="#{msg.dbuRequest_cap}" sortBy="#{item.cap}" styleClass="xml">
+                #{item.cap}
+            </p:column>
+            <p:column id="dbuRequest_pIva" headerText="#{msg.dbuRequest_pIva}" sortBy="#{item.pIva}" styleClass="xml">
+                #{item.pIva}
+            </p:column>
+            <p:column id="dbuRequest_telefono" headerText="#{msg.dbuRequest_telefono}" sortBy="#{item.telefono}" styleClass="xml">
+                #{item.telefono}
+            </p:column>
+            <p:column id="dbuRequest_fax" headerText="#{msg.dbuRequest_fax}" sortBy="#{item.fax}" styleClass="xml">
+                #{item.fax}
+            </p:column>
+            <p:column id="dbuRequest_titoloStudio" headerText="#{msg.dbuRequest_titoloStudio}" sortBy="#{item.titoloStudio}" styleClass="xml">
+                #{item.titoloStudio}
+            </p:column>
+            <p:column id="dbuRequest_attivita" headerText="#{msg.dbuRequest_attivita}" sortBy="#{item.attivita}" styleClass="xml">
+                #{item.attivita}
+            </p:column>
+            <p:column id="dbuRequest_flagReverse" headerText="#{msg.dbuRequest_flagReverse}" sortBy="#{item.flagReverse}" styleClass="status">
+                #{item.flagReverse}
+            </p:column>
+            <p:column id="dbuRequest_flagPubblicita" headerText="#{msg.dbuRequest_flagPubblicita}" sortBy="#{item.flagPubblicita}" styleClass="status">
+                #{item.flagPubblicita}
+            </p:column>
+            <p:column id="dbuRequest_dateInsert" headerText="#{msg.dbuRequest_dateInsert}" sortBy="#{item.dateInsert}" styleClass="xml">
+                #{item.dateInsert}
+            </p:column>
+
+            <p:column id="actions" headerText="#{msg.actions}" styleClass="actions-column" resizable="false">
+                <app:iconSelect item="#{item}" />
+                <app:iconEdit item="#{item}" />
+                <app:iconView item="#{item}" />
+                <app:iconDelete item="#{item}" />
+            </p:column>-->
+
+        </ui:define>
+    </app:search>
+</ui:composition>

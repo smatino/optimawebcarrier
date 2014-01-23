@@ -22,6 +22,7 @@
 		<class>com.optima.opticarrier.domain.CpsQuoteRequest</class>
 		<class>com.optima.opticarrier.domain.CpsQuoteResponse</class>
 		<class>com.optima.opticarrier.domain.CpsQuoteResponsePenali</class>
+        <class>com.optima.opticarrier.domain.DbuRequest</class>
 		<class>com.optima.opticarrier.domain.OloCps</class>
 		<class>com.optima.opticarrier.domain.Prefissi</class>
 		<class>com.optima.opticarrier.domain.Response</class>

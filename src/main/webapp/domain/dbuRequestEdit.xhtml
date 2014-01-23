@@ -1,0 +1,35 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+                xmlns:ui="http://java.sun.com/jsf/facelets"
+                xmlns:c="http://java.sun.com/jsp/jstl/core"
+                xmlns:f="http://java.sun.com/jsf/core"
+                xmlns:h="http://java.sun.com/jsf/html"
+                xmlns:p="http://primefaces.org/ui"
+                xmlns:app="http://springfuse.jaxio.com/app"
+                xmlns:appcc="http://java.sun.com/jsf/composite/components">
+    <app:edit bean="#{dbuRequestEditForm}" title="#{dbuRequestEditForm.title}">
+
+        <ui:define name="form">
+            <app:inputBoolean id="toCsv" value="#{dbuRequestEditForm.toCsv}" label="dbuRequest_toCsv" />
+            <app:input id="optProgressivo" value="#{dbuRequestEditForm.dbuRequest.optProgressivo}" label="dbuRequest_optProgressivo" />
+            <app:input id="dn" value="#{dbuRequestEditForm.dbuRequest.dn}" label="dbuRequest_dn" />
+            <app:inputBoolean id="flagPubblicazione" value="#{dbuRequestEditForm.dbuRequest.flagPubblicazione}" label="dbuRequest_flagPubblicazione" />
+            <app:inputBoolean id="flagCancellazione" value="#{dbuRequestEditForm.dbuRequest.flagCancellazione}" label="dbuRequest_flagCancellazione" />
+            <app:inputBoolean id="flagModifica" value="#{dbuRequestEditForm.dbuRequest.flagModifica}" label="dbuRequest_flagModifica" />
+            <app:input id="ragSociale" value="#{dbuRequestEditForm.dbuRequest.ragSociale}" label="dbuRequest_ragSociale" />
+            <app:input id="indirizzo" value="#{dbuRequestEditForm.dbuRequest.indirizzo}" label="dbuRequest_indirizzo" />
+            <app:input id="localita" value="#{dbuRequestEditForm.dbuRequest.localita}" label="dbuRequest_localita" />
+            <app:input id="provincia" value="#{dbuRequestEditForm.dbuRequest.provincia}" label="dbuRequest_provincia" />
+            <app:input id="cap" value="#{dbuRequestEditForm.dbuRequest.cap}" label="dbuRequest_cap" />
+            <app:input id="codFisc" value="#{dbuRequestEditForm.dbuRequest.codFisc}" label="dbuRequest_codFisc" />
+            <app:input id="pIva" value="#{dbuRequestEditForm.dbuRequest.pIva}" label="dbuRequest_pIva" />
+            <app:input id="telefono" value="#{dbuRequestEditForm.dbuRequest.telefono}" label="dbuRequest_telefono" />
+            <app:input id="fax" value="#{dbuRequestEditForm.dbuRequest.fax}" label="dbuRequest_fax" />
+            <app:input id="titoloStudio" value="#{dbuRequestEditForm.dbuRequest.titoloStudio}" label="dbuRequest_titoloStudio" />
+            <app:input id="attivita" value="#{dbuRequestEditForm.dbuRequest.attivita}" label="dbuRequest_attivita" />
+            <app:inputBoolean id="flagReverse" value="#{dbuRequestEditForm.dbuRequest.flagReverse}" label="dbuRequest_flagReverse" />
+            <app:inputBoolean id="flagPubblicita" value="#{dbuRequestEditForm.dbuRequest.flagPubblicita}" label="dbuRequest_flagPubblicita" />
+            <app:inputDateTime id="dateInsert" value="#{dbuRequestEditForm.dbuRequest.dateInsert}" label="dbuRequest_dateInsert" />
+        </ui:define>
+    </app:edit>
+</ui:composition>

@@ -45,6 +45,7 @@ public class MessageSourceConfiguration {
                 "classpath:/localization/domain/CpsQuoteRequest", //
                 "classpath:/localization/domain/CpsQuoteResponse", //
                 "classpath:/localization/domain/CpsQuoteResponsePenali", //
+                "classpath:/localization/domain/DbuRequest",
                 "classpath:/localization/domain/OloCps", //
                 "classpath:/localization/domain/Prefissi", //
                 "classpath:/localization/domain/Response", //
