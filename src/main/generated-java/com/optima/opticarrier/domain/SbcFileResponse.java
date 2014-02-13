@@ -42,6 +42,7 @@ public class SbcFileResponse implements Identifiable<Integer>, Serializable {
     private Date dataCreazione;
     private String olo;
     private String stato;
+    private String service;
 
     // -- [id] ------------------------
 
@@ -164,6 +165,15 @@ public class SbcFileResponse implements Identifiable<Integer>, Serializable {
         return identifiableHashBuilder.hash(log, this);
     }
 
+    public String getService() {
+        return service;
+    }
+
+    public void setService(String service) {
+        this.service = service;
+    }
+
+
     /**
      * Construct a readable string representation for this SbcFileResponse instance.
      * @see java.lang.Object#toString()
@@ -176,6 +186,7 @@ public class SbcFileResponse implements Identifiable<Integer>, Serializable {
                 .add("dataCreazione", getDataCreazione()) //
                 .add("olo", getOlo()) //
                 .add("stato", getStato()) //
+                .add("service", getService()) //
                 .toString();
     }
 }

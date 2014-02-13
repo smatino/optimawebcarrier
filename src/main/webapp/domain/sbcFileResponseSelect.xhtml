@@ -39,6 +39,9 @@
 			<p:column id="sbcFileResponse_stato" headerText="#{msg.sbcFileResponse_stato}" sortBy="#{item.stato}" styleClass="stato">
 				#{item.stato}
 			</p:column>
+            <p:column id="sbcFileResponse_service" headerText="#{msg.sbcFileResponse_service}" sortBy="#{item.service}" styleClass="stato">
+                #{item.service}
+            </p:column>
 			<p:column id="actions" headerText="#{msg.actions}" styleClass="actions-column" resizable="false">
 				<app:iconSelect item="#{item}" />
 				<app:iconEdit item="#{item}" />

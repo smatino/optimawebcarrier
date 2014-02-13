@@ -11,6 +11,7 @@ public class DbuRequest_ {
     public static volatile SingularAttribute<DbuRequest, Integer> id;
     public static volatile SingularAttribute<DbuRequest, String> optProgressivo;
     public static volatile SingularAttribute<DbuRequest, String> dn;
+    public static volatile SingularAttribute<DbuRequest, String> idContratto;
     public static volatile SingularAttribute<DbuRequest, Boolean> flagPubblicazione;
     public static volatile SingularAttribute<DbuRequest, Boolean> flagCancellazione;
     public static volatile SingularAttribute<DbuRequest, Boolean> flagModifica;

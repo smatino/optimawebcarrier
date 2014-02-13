@@ -22,7 +22,11 @@ public class CsvUtil {
             Object val;
 
             if(beanWrapper.getPropertyDescriptor(field).getPropertyType().equals(Boolean.class)){
-                val = (Boolean)beanWrapper.getPropertyValue(field) ? "1": "0";
+                if(beanWrapper.getPropertyValue(field) == null){
+                    val = "0";
+                }else{
+                    val = (Boolean)beanWrapper.getPropertyValue(field) ? "1": "0";
+                }
             } else {
                 val = beanWrapper.getPropertyValue(field);
             }

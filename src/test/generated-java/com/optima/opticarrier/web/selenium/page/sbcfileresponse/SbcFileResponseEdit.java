@@ -29,6 +29,7 @@ public class SbcFileResponseEdit {
         public DateInput dataCreazione = new DateInput("form:dataCreazione");
         public StringInput olo = new StringInput("form:olo");
         public StringInput stato = new StringInput("form:stato");
+        public StringInput service = new StringInput("form:service");
     };
 
     public static class SbcFileResponseEditTabs extends CustomWebElement {

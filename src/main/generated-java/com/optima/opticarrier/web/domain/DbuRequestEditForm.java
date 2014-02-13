@@ -57,7 +57,7 @@ public class DbuRequestEditForm extends GenericEditForm<DbuRequest, Integer> {
         if(toCsv){
             String fileName = String.format(fileNamePattern, time);
 
-            String[] fields = {"optProgressivo", "dn", "flagPubblicazione", "flagCancellazione", "flagModifica", "ragSociale",
+            String[] fields = {"optProgressivo", "dn", "idContratto" , "flagPubblicazione", "flagCancellazione", "flagModifica", "ragSociale",
                     "indirizzo", "localita", "provincia", "cap", "codFisc", "pIva", "telefono", "fax", "titoloStudio",
                     "attivita", "flagReverse", "flagPubblicita" };
 

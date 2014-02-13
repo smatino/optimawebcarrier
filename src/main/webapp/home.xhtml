@@ -39,15 +39,20 @@
 		<p:panel header="#{msg.home_start_conversation}">
 			<p>#{msg.home_conversation}</p>
 			<ul>
+                <li>
+
+                    <h:commandLink id="insertDBU" action="#{dbuRequestController.beginSearch()}" rendered="#{dbuRequestPermission.canSearch()}" ajax="false" immediate="true">
+                        <!--<h:outputText value="#{msg.home_conversation_search}"/>-->
+                        <h:outputText value="Inserimento modulo DBU" />
+                    </h:commandLink>
+                    <h:outputText value=" " />
+                </li>
 				<li>
-					<h:outputText value="Richieste inviate a BT " />
+
 					<h:commandLink id="selectBtRequests" action="#{btRequestController.beginSearch()}" rendered="#{btRequestPermission.canSearch()}" ajax="false" immediate="true">
-						<h:outputText value="#{msg.home_conversation_search}"/>
+                        <h:outputText value="Richieste inviate a BT " />
 					</h:commandLink>
 					<h:outputText value=" " />
-					<h:commandLink id="newBtRequests" action="#{btRequestController.beginCreate()}" rendered="#{btRequestPermission.canCreate()}" ajax="false" immediate="true">
-						<h:outputText value="#{msg.home_conversation_create}"/>						
-					</h:commandLink>
 				</li>
 				<!-- <li>
 					<h:outputText value="#{msg.cpsDeactivationNotification} " />
@@ -100,15 +105,13 @@
 					</h:commandLink>
 				</li> -->
 				<li>
-					<h:outputText value="#{msg.oloCps} " />
+
 					<h:commandLink id="selectOloCpss" action="#{oloCpsController.beginSearch()}" rendered="#{oloCpsPermission.canSearch()}" ajax="false" immediate="true">
-						<h:outputText value="#{msg.home_conversation_search}"/>
+                        <h:outputText value="#{msg.oloCps} " />
 					</h:commandLink>
 					<h:outputText value=" " />
-					<h:commandLink id="newOloCpss" action="#{oloCpsController.beginCreate()}" rendered="#{oloCpsPermission.canCreate()}" ajax="false" immediate="true">
-						<h:outputText value="#{msg.home_conversation_create}"/>
-					</h:commandLink>
 				</li>
+                <!--
 				<li>
 					<h:outputText value="#{msg.prefissi} " />
 					<h:commandLink id="selectPrefissis" action="#{prefissiController.beginSearch()}" rendered="#{prefissiPermission.canSearch()}" ajax="false" immediate="true">
@@ -119,85 +122,55 @@
 						<h:outputText value="#{msg.home_conversation_create}"/>
 					</h:commandLink>
 				</li>
+				-->
 				<li>
-					<h:outputText value="Esiti inviati al Provisioning " />
 					<h:commandLink id="selectResponses" action="#{responseController.beginSearch()}" rendered="#{responsePermission.canSearch()}" ajax="false" immediate="true">
-						<h:outputText value="#{msg.home_conversation_search}"/>
+                        <h:outputText value="Esiti inviati al Provisioning " />
 					</h:commandLink>
 					<h:outputText value=" " />
-					<h:commandLink id="newResponses" action="#{responseController.beginCreate()}" rendered="#{responsePermission.canCreate()}" ajax="false" immediate="true">
-						<h:outputText value="#{msg.home_conversation_create}"/>
-					</h:commandLink>
 				</li>
-				<!-- <li>
-					<h:outputText value="#{msg.sbcCpsRequest} " />
+				<li>
 					<h:commandLink id="selectSbcCpsRequests" action="#{sbcCpsRequestController.beginSearch()}" rendered="#{sbcCpsRequestPermission.canSearch()}" ajax="false" immediate="true">
-						<h:outputText value="#{msg.home_conversation_search}"/>
+                        <h:outputText value="#{msg.sbcCpsRequest} " />
 					</h:commandLink>
 					<h:outputText value=" " />
-					<h:commandLink id="newSbcCpsRequests" action="#{sbcCpsRequestController.beginCreate()}" rendered="#{sbcCpsRequestPermission.canCreate()}" ajax="false" immediate="true">
-						<h:outputText value="#{msg.home_conversation_create}"/>
-					</h:commandLink>
 				</li>
 				<li>
-					<h:outputText value="#{msg.sbcCpsResponse} " />
 					<h:commandLink id="selectSbcCpsResponses" action="#{sbcCpsResponseController.beginSearch()}" rendered="#{sbcCpsResponsePermission.canSearch()}" ajax="false" immediate="true">
-						<h:outputText value="#{msg.home_conversation_search}"/>
+                        <h:outputText value="#{msg.sbcCpsResponse} " />
 					</h:commandLink>
 					<h:outputText value=" " />
-					<h:commandLink id="newSbcCpsResponses" action="#{sbcCpsResponseController.beginCreate()}" rendered="#{sbcCpsResponsePermission.canCreate()}" ajax="false" immediate="true">
-						<h:outputText value="#{msg.home_conversation_create}"/>
-					</h:commandLink>
-				</li> -->
+				</li>
 				<li>
-					<h:outputText value="File di richiesta " />
+
 					<h:commandLink id="selectSbcFileRequests" action="#{sbcFileRequestController.beginSearch()}" rendered="#{sbcFileRequestPermission.canSearch()}" ajax="false" immediate="true">
-						<h:outputText value="#{msg.home_conversation_search}"/>
+                        <h:outputText value="File di richiesta " />
 					</h:commandLink>
 					<h:outputText value=" " />
-					<h:commandLink id="newSbcFileRequests" action="#{sbcFileRequestController.beginCreate()}" rendered="#{sbcFileRequestPermission.canCreate()}" ajax="false" immediate="true">
-						<h:outputText value="#{msg.home_conversation_create}"/>
-					</h:commandLink>
 				</li>
 				<li>
-					<h:outputText value="File di risposta " />
 					<h:commandLink id="selectSbcFileResponses" action="#{sbcFileResponseController.beginSearch()}" rendered="#{sbcFileResponsePermission.canSearch()}" ajax="false" immediate="true">
-						<h:outputText value="#{msg.home_conversation_search}"/>
+                        <h:outputText value="File di risposta " />
 					</h:commandLink>
 					<h:outputText value=" " />
-					<h:commandLink id="newSbcFileResponses" action="#{sbcFileResponseController.beginCreate()}" rendered="#{sbcFileResponsePermission.canCreate()}" ajax="false" immediate="true">
-						<h:outputText value="#{msg.home_conversation_create}"/>
-					</h:commandLink>
 				</li>
 				<li>
-					<h:outputText value="Richieste WLR " />
 					<h:commandLink id="selectSbcWlrRequests" action="#{sbcWlrRequestController.beginSearch()}" rendered="#{sbcWlrRequestPermission.canSearch()}" ajax="false" immediate="true">
-						<h:outputText value="#{msg.home_conversation_search}"/>
+                        <h:outputText value="Richieste WLR " />
 					</h:commandLink>
 					<h:outputText value=" " />
-					<h:commandLink id="newSbcWlrRequests" action="#{sbcWlrRequestController.beginCreate()}" rendered="#{sbcWlrRequestPermission.canCreate()}" ajax="false" immediate="true">
-						<h:outputText value="#{msg.home_conversation_create}"/>
-					</h:commandLink>
 				</li>
 				<li>
-					<h:outputText value="Richieste di variazione WLR (STS) " />
 					<h:commandLink id="selectSbcWlrRequestVariations" action="#{sbcWlrRequestVariationController.beginSearch()}" rendered="#{sbcWlrRequestVariationPermission.canSearch()}" ajax="false" immediate="true">
-						<h:outputText value="#{msg.home_conversation_search}"/>
+                        <h:outputText value="Richieste di variazione WLR (STS) " />
 					</h:commandLink>
 					<h:outputText value=" " />
-					<h:commandLink id="newSbcWlrRequestVariations" action="#{sbcWlrRequestVariationController.beginCreate()}" rendered="#{sbcWlrRequestVariationPermission.canCreate()}" ajax="false" immediate="true">
-						<h:outputText value="#{msg.home_conversation_create}"/>
-					</h:commandLink>
 				</li>
 				<li>
-					<h:outputText value="Risposte WLR" />
 					<h:commandLink id="selectSbcWlrResponses" action="#{sbcWlrResponseController.beginSearch()}" rendered="#{sbcWlrResponsePermission.canSearch()}" ajax="false" immediate="true">
-						<h:outputText value="#{msg.home_conversation_search}"/>
+                        <h:outputText value="Risposte WLR" />
 					</h:commandLink>
 					<h:outputText value=" " />
-					<h:commandLink id="newSbcWlrResponses" action="#{sbcWlrResponseController.beginCreate()}" rendered="#{sbcWlrResponsePermission.canCreate()}" ajax="false" immediate="true">
-						<h:outputText value="#{msg.home_conversation_create}"/>
-					</h:commandLink>
 				</li>
 				<!-- <li>
 					<h:outputText value="#{msg.telecomFilePostfix} " />
@@ -210,14 +183,10 @@
 					</h:commandLink>
 				</li> -->
 				<li>
-					<h:outputText value="WLR Numeri aggiuntivi " />
 					<h:commandLink id="selectWlrRequestAggiuntiviss" action="#{wlrRequestAggiuntivisController.beginSearch()}" rendered="#{wlrRequestAggiuntivisPermission.canSearch()}" ajax="false" immediate="true">
-						<h:outputText value="#{msg.home_conversation_search}"/>
+                        <h:outputText value="WLR Numeri aggiuntivi " />
 					</h:commandLink>
 					<h:outputText value=" " />
-					<h:commandLink id="newWlrRequestAggiuntiviss" action="#{wlrRequestAggiuntivisController.beginCreate()}" rendered="#{wlrRequestAggiuntivisPermission.canCreate()}" ajax="false" immediate="true">
-						<h:outputText value="#{msg.home_conversation_create}"/>
-					</h:commandLink>
 				</li>
 				<!-- <li>
 					<h:outputText value="#{msg.wlrServiceCode} " />

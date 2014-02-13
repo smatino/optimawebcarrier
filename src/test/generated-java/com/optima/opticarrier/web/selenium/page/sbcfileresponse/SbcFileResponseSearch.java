@@ -31,6 +31,7 @@ public class SbcFileResponseSearch {
         public OrderBy dataCreazione = new OrderBy("sbcFileResponse_dataCreazione");
         public OrderBy olo = new OrderBy("sbcFileResponse_olo");
         public OrderBy stato = new OrderBy("sbcFileResponse_stato");
+        public OrderBy service = new OrderBy("sbcFileResponse_service");
     }
 
     public static class SbcFileResponseSearchForm extends SearchForm {
@@ -38,5 +39,6 @@ public class SbcFileResponseSearch {
         public StringRange dataCreazione = new StringRange("form:dataCreazione");
         public Autocomplete olo = new Autocomplete("form:olo");
         public Autocomplete stato = new Autocomplete("form:stato");
+        public Autocomplete service = new Autocomplete("form:service");
     }
 }

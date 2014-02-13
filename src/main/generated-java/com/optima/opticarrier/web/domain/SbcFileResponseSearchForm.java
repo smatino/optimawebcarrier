@@ -36,6 +36,7 @@ public class SbcFileResponseSearchForm extends GenericSearchForm<SbcFileResponse
     protected PropertySelector<SbcFileResponse, String> nomeFileSelector = newPropertySelector(SbcFileResponse_.nomeFile);
     protected PropertySelector<SbcFileResponse, String> oloSelector = newPropertySelector(SbcFileResponse_.olo);
     protected PropertySelector<SbcFileResponse, String> statoSelector = newPropertySelector(SbcFileResponse_.stato);
+    protected PropertySelector<SbcFileResponse, String> serviceSelector = newPropertySelector(SbcFileResponse_.service);
 
     public SbcFileResponse getSbcFileResponse() {
         return sbcFileResponse;
@@ -66,6 +67,7 @@ public class SbcFileResponseSearchForm extends GenericSearchForm<SbcFileResponse
         this.nomeFileSelector = other.getNomeFileSelector();
         this.oloSelector = other.getOloSelector();
         this.statoSelector = other.getStatoSelector();
+        this.serviceSelector = other.getServiceSelector();
     }
 
     // Ranges
@@ -84,5 +86,13 @@ public class SbcFileResponseSearchForm extends GenericSearchForm<SbcFileResponse
 
     public PropertySelector<SbcFileResponse, String> getStatoSelector() {
         return statoSelector;
+    }
+
+    public PropertySelector<SbcFileResponse, String> getServiceSelector() {
+        return serviceSelector;
+    }
+
+    public void setServiceSelector(PropertySelector<SbcFileResponse, String> serviceSelector) {
+        this.serviceSelector = serviceSelector;
     }
 }

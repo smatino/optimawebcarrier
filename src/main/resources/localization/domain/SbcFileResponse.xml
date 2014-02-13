@@ -23,6 +23,7 @@
 	<entry key="sbcFileResponse_dataCreazione">Data Creazione</entry>
 	<entry key="sbcFileResponse_olo">Olo</entry>
 	<entry key="sbcFileResponse_stato">Stato</entry>
+    <entry key="sbcFileResponse_service">Service</entry>
 
 	<!-- uniques -->
 	<entry key="sbcFileResponse_composite_unique_constraint_error">A composite unique constraint has failed on Sbc File Response</entry>

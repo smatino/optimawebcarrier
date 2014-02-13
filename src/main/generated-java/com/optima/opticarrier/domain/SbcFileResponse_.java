@@ -22,4 +22,5 @@ public abstract class SbcFileResponse_ {
     public static volatile SingularAttribute<SbcFileResponse, Date> dataCreazione;
     public static volatile SingularAttribute<SbcFileResponse, String> olo;
     public static volatile SingularAttribute<SbcFileResponse, String> stato;
+    public static volatile SingularAttribute<SbcFileResponse, String> service;
 }

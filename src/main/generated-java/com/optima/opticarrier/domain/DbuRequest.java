@@ -19,6 +19,9 @@ public class DbuRequest implements Identifiable<Integer>, Serializable {
     @Column(name = "dn")
     private String dn;
 
+    @Column(name = "idContratto")
+    private String idContratto;
+
     @Column(name = "flagPubblicazione")
     private Boolean flagPubblicazione;
 
@@ -239,6 +242,14 @@ public class DbuRequest implements Identifiable<Integer>, Serializable {
 
     public void setDateInsert(Date dateInsert) {
         this.dateInsert = dateInsert;
+    }
+
+    public String getIdContratto() {
+        return idContratto;
+    }
+
+    public void setIdContratto(String idContratto) {
+        this.idContratto = idContratto;
     }
 
     @Override

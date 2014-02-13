@@ -14,6 +14,7 @@
     <!-- attributes -->
     <entry key="dbuRequest_optProgressivo">Opt Progressivo</entry>
     <entry key="dbuRequest_dn">DN</entry>
+    <entry key="dbuRequest_idContratto">Id Contratto</entry>
     <entry key="dbuRequest_flagPubblicazione">Flag Pubblicazione</entry>
     <entry key="dbuRequest_flagCancellazione">Flag Cancellazione</entry>
     <entry key="dbuRequest_flagModifica">Flag Modifica</entry>

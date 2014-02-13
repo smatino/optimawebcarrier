@@ -39,6 +39,7 @@ public class SbcFileResponsePrinter extends GenericPrinter<SbcFileResponse> {
         appendIfNotEmpty(ret, sbcFileResponse.getNomeFile());
         appendIfNotEmpty(ret, sbcFileResponse.getOlo());
         appendIfNotEmpty(ret, sbcFileResponse.getStato());
+        appendIfNotEmpty(ret, sbcFileResponse.getService());
         return ret.toString();
     }
 }

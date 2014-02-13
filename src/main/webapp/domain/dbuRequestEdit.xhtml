@@ -11,11 +11,17 @@
 
         <ui:define name="form">
             <app:inputBoolean id="toCsv" value="#{dbuRequestEditForm.toCsv}" label="dbuRequest_toCsv" />
+            <app:input id="cliente" value="#{dbuRequestEditForm.dbuRequest.idContratto}" label="dbuRequest_idContratto" />
+            <!--
             <app:input id="optProgressivo" value="#{dbuRequestEditForm.dbuRequest.optProgressivo}" label="dbuRequest_optProgressivo" />
+            -->
             <app:input id="dn" value="#{dbuRequestEditForm.dbuRequest.dn}" label="dbuRequest_dn" />
+
             <app:inputBoolean id="flagPubblicazione" value="#{dbuRequestEditForm.dbuRequest.flagPubblicazione}" label="dbuRequest_flagPubblicazione" />
+            <!--
             <app:inputBoolean id="flagCancellazione" value="#{dbuRequestEditForm.dbuRequest.flagCancellazione}" label="dbuRequest_flagCancellazione" />
             <app:inputBoolean id="flagModifica" value="#{dbuRequestEditForm.dbuRequest.flagModifica}" label="dbuRequest_flagModifica" />
+            -->
             <app:input id="ragSociale" value="#{dbuRequestEditForm.dbuRequest.ragSociale}" label="dbuRequest_ragSociale" />
             <app:input id="indirizzo" value="#{dbuRequestEditForm.dbuRequest.indirizzo}" label="dbuRequest_indirizzo" />
             <app:input id="localita" value="#{dbuRequestEditForm.dbuRequest.localita}" label="dbuRequest_localita" />
@@ -29,7 +35,9 @@
             <app:input id="attivita" value="#{dbuRequestEditForm.dbuRequest.attivita}" label="dbuRequest_attivita" />
             <app:inputBoolean id="flagReverse" value="#{dbuRequestEditForm.dbuRequest.flagReverse}" label="dbuRequest_flagReverse" />
             <app:inputBoolean id="flagPubblicita" value="#{dbuRequestEditForm.dbuRequest.flagPubblicita}" label="dbuRequest_flagPubblicita" />
+            <!--
             <app:inputDateTime id="dateInsert" value="#{dbuRequestEditForm.dbuRequest.dateInsert}" label="dbuRequest_dateInsert" />
+            -->
         </ui:define>
     </app:edit>
 </ui:composition>
