@@ -23,7 +23,7 @@ public class DbuRequestEditForm extends GenericEditForm<DbuRequest, Integer> {
     @Value("${dbuRequest.fileName.pattern}")
     protected String fileNamePattern;
 
-    protected boolean toCsv;
+    protected boolean toCsv = true;
 
     @Inject
     protected DbuRequestController dbuRequestController;
